@@ -6,7 +6,7 @@ console.log(galleryItems);
 const galleryContainer = document.querySelector('.gallery');
 const itemMarkup = createGalleryCart(galleryItems);
 galleryContainer.insertAdjacentHTML('beforeend', createGalleryCart(galleryItems));
-
+ const originalImg = new SimpleLightbox('.gallery a', { fadeSpeed: 250 });
 
 function createGalleryCart(galleryItems) {
     return galleryItems.map(({ preview, original, description }) => {
@@ -27,7 +27,7 @@ function clickImg(e) {
     if (e.target.nodeName !== 'IMG') {
         return;
     }
-
-    const originalImg = new SimpleLightbox('.gallery a', { fadeSpeed: 250 });
+    originalImg;
+   
 
 }
