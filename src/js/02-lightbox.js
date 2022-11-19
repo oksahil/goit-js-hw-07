@@ -6,7 +6,7 @@ import { galleryItems } from './gallery-items.js';
 const galleryContainer = document.querySelector('.gallery');
 const itemMarkup = createGalleryCart(galleryItems);
 galleryContainer.insertAdjacentHTML('beforeend', createGalleryCart(galleryItems));
- const originalImg = new SimpleLightbox('.gallery a', { fadeSpeed: 250 });
+const originalImg = new SimpleLightbox('.gallery a', { fadeSpeed: 250 });
 
 function createGalleryCart(galleryItems) {
     return galleryItems.map(({ preview, original, description }) => {
